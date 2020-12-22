@@ -11,6 +11,8 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  final double jumpMultiplier = 2.5;
+
   _HomePageState() {
     init();
   }
@@ -62,7 +64,7 @@ class _HomePageState extends State<HomePage> {
     time = 0;
     Timer.periodic(Duration(milliseconds: 55), (timer) {
       time += 0.05;
-      double height = -4.9 * time * time + 2.8 * time;
+      double height = -4.9 * time * time + jumpMultiplier * time;
 
       // Actualiza la posicion X de cada barra
       for (MyBarrier barrier in barriers) {
