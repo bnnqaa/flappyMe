@@ -3,10 +3,20 @@ import 'package:flutter/material.dart';
 class MyBarrier extends StatelessWidget {
   final size;
 
-  MyBarrier({this.size});
+  MyBarrier({this.size, this.xPos, this.yPos});
+  double xPos, yPos;
 
-  int numberOfSquares;
-  int numberInRow;
+  void setX(double x) {
+    xPos = x;
+  }
+
+  double get x => xPos;
+
+  void setY(double y) {
+    yPos = y;
+  }
+
+  double get y => yPos;
 
   @override
   Widget build(BuildContext context) {
@@ -23,8 +33,4 @@ class MyBarrier extends StatelessWidget {
       ),
     );
   }
-}
-
-bump(){
-
 }
