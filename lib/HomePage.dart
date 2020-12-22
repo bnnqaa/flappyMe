@@ -31,6 +31,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void init() {
+    score = 0;
     meYaxis = 0;
     initialHeight = meYaxis;
     gameStarted = false;
@@ -48,7 +49,7 @@ class _HomePageState extends State<HomePage> {
       score += 1;
       speed += 0.005;
     } else {
-      barrier.setX(barrier.x - 0.05 + speed);
+      barrier.setX(barrier.x - 0.05 - speed);
     }
   }
 
